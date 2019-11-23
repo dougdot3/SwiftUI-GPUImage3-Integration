@@ -15,7 +15,34 @@
 		91B92A2E23897D29000D2024 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B92A2D23897D29000D2024 /* Preview Assets.xcassets */; };
 		91B92A3123897D29000D2024 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B92A2F23897D29000D2024 /* LaunchScreen.storyboard */; };
 		91D4F4EE2389A232006C428E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D4F4ED2389A231006C428E /* CameraView.swift */; };
+		91D4F4FD2389C463006C428E /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D4F4F82389C432006C428E /* GPUImage.framework */; };
+		91D4F4FF2389C473006C428E /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 91D4F4F82389C432006C428E /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91D4F5012389C722006C428E /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D4F5002389C722006C428E /* CameraPreviewView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91D4F4F72389C432006C428E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91D4F4F22389C432006C428E /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE0BE7C20D6DE610006E120;
+			remoteInfo = GPUImage_iOS;
+		};
+		91D4F4F92389C432006C428E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91D4F4F22389C432006C428E /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE0BE8C20D6E2B80006E120;
+			remoteInfo = GPUImage_macOS;
+		};
+		91D4F4FB2389C454006C428E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91D4F4F22389C432006C428E /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCE0BE7B20D6DE610006E120;
+			remoteInfo = GPUImage_iOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		912C8E9F23898506008F8E8E /* CopyFiles */ = {
@@ -24,6 +51,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91D4F4FE2389C469006C428E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				91D4F4FF2389C473006C428E /* GPUImage.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +77,8 @@
 		91B92A3023897D29000D2024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91B92A3223897D29000D2024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91D4F4ED2389A231006C428E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		91D4F4F22389C432006C428E /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Desktop/GPUImage3-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
+		91D4F5002389C722006C428E /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		C1E7A48D2DE5CA7DF68BB422 /* Pods-Test-Headshot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Headshot.release.xcconfig"; path = "Target Support Files/Pods-Test-Headshot/Pods-Test-Headshot.release.xcconfig"; sourceTree = "<group>"; };
 		F1F7729C5CD02C25106323B7 /* Pods_Test_Headshot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Headshot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -49,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D4F4FD2389C463006C428E /* GPUImage.framework in Frameworks */,
 				72410D8D8138FA880F0507AD /* Pods_Test_Headshot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +134,7 @@
 		91B92A2323897D25000D2024 /* Test-Headshot */ = {
 			isa = PBXGroup;
 			children = (
+				91D4F5002389C722006C428E /* CameraPreviewView.swift */,
 				91D4F4ED2389A231006C428E /* CameraView.swift */,
 				91B92A2423897D25000D2024 /* AppDelegate.swift */,
 				91B92A2623897D25000D2024 /* SceneDelegate.swift */,
@@ -101,6 +142,7 @@
 				91B92A2A23897D29000D2024 /* Assets.xcassets */,
 				91B92A2F23897D29000D2024 /* LaunchScreen.storyboard */,
 				91B92A3223897D29000D2024 /* Info.plist */,
+				91D4F4F22389C432006C428E /* GPUImage.xcodeproj */,
 				91B92A2C23897D29000D2024 /* Preview Content */,
 			);
 			path = "Test-Headshot";
@@ -112,6 +154,15 @@
 				91B92A2D23897D29000D2024 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91D4F4F32389C432006C428E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91D4F4F82389C432006C428E /* GPUImage.framework */,
+				91D4F4FA2389C432006C428E /* GPUImage.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,10 +178,12 @@
 				91B92A1F23897D25000D2024 /* Resources */,
 				912C8E9F23898506008F8E8E /* CopyFiles */,
 				B829EC8E5A58719390442161 /* [CP] Embed Pods Frameworks */,
+				91D4F4FE2389C469006C428E /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				91D4F4FC2389C454006C428E /* PBXTargetDependency */,
 			);
 			name = "Test-Headshot";
 			productName = "Test-Headshot";
@@ -163,12 +216,35 @@
 			mainGroup = 91B92A1823897D24000D2024;
 			productRefGroup = 91B92A2223897D25000D2024 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 91D4F4F32389C432006C428E /* Products */;
+					ProjectRef = 91D4F4F22389C432006C428E /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				91B92A2023897D25000D2024 /* Test-Headshot */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		91D4F4F82389C432006C428E /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 91D4F4F72389C432006C428E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		91D4F4FA2389C432006C428E /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 91D4F4F92389C432006C428E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		91B92A1F23897D25000D2024 /* Resources */ = {
@@ -232,12 +308,21 @@
 			files = (
 				91B92A2523897D25000D2024 /* AppDelegate.swift in Sources */,
 				91B92A2723897D25000D2024 /* SceneDelegate.swift in Sources */,
+				91D4F5012389C722006C428E /* CameraPreviewView.swift in Sources */,
 				91B92A2923897D25000D2024 /* ContentView.swift in Sources */,
 				91D4F4EE2389A232006C428E /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91D4F4FC2389C454006C428E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage_iOS;
+			targetProxy = 91D4F4FB2389C454006C428E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		91B92A2F23897D29000D2024 /* LaunchScreen.storyboard */ = {

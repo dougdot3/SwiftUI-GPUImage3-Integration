@@ -7,15 +7,15 @@
 //
 import UIKit
 import SwiftUI
-import BBMetalImage
+import GPUImage
 import WebKit
 
 struct CameraView: UIViewRepresentable {
-    var imageSource: BBMetalStaticImageSource!
     
     func makeUIView(context: Context) -> UIView {
         let testImage = UIImage(named:"brock")!
-        let filteredImage = BBMetalBoxBlurFilter(kernelWidth: 3, kernelHeight: 7).filteredImage(with: testImage)
+        let toonFilter = ColorInversion()
+        let filteredImage = testImage.filterWithOperation(toonFilter)
         let imageView = UIImageView(image: filteredImage)
         return imageView
     }

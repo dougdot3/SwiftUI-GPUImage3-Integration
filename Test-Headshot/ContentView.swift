@@ -9,8 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isShowingCameraView = false
     var body: some View {
-         CameraView()
+         VStack {
+            CameraView()
+            Button(action : {
+                print("Button Pressed")
+                self.isShowingCameraView.toggle()
+            }, label : {
+                Text("Show Camera Preview")
+            })
+            .sheet(isPresented: $isShowingCameraView, content: {
+                CameraPreviewView()
+            })
+         }
     }
 }
 
