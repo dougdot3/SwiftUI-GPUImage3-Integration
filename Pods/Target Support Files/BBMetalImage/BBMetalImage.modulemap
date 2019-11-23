@@ -1,0 +1,6 @@
+framework module BBMetalImage {
+  umbrella header "BBMetalImage-umbrella.h"
+
+  export *
+  module * { export * }
+}
