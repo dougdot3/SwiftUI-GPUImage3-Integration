@@ -33,13 +33,13 @@ GPUImage3 generally returns a RenderView which is attached to the view hierarchy
 Thus, in our controllers we need to adjust in order to return something that Representable can consume.
 
 For images:
-let filteredImage = testImage.filterWithOperation(inversionFilter)
-// We then take the image and assign it to a view returned via UIViewRepresentable
-let imageView = UIImageView(image: filteredImage)
-return imageView
+let filteredImage = testImage.filterWithOperation(inversionFilter)<br/>
+// We then take the image and assign it to a view returned via UIViewRepresentable<br/>
+let imageView = UIImageView(image: filteredImage)<br/>
+return imageView<br/>
 
-For video:
- @IBOutlet weak var renderView: RenderView!..
- let finalView = RenderView(frame: CGRect(x: 0, y: 0, width: 400, height: 500))..
- camera.startCapture()...
+For video:<br/>
+ @IBOutlet weak var renderView: RenderView!..<br/>
+ let finalView = RenderView(frame: CGRect(x: 0, y: 0, width: 400, height: 500))..<br/>
+ camera.startCapture()...<br/>
  view.addSubview(finalView)
