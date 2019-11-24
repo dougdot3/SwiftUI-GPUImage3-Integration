@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,10 +14,10 @@
 		91B92A2B23897D29000D2024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B92A2A23897D29000D2024 /* Assets.xcassets */; };
 		91B92A2E23897D29000D2024 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B92A2D23897D29000D2024 /* Preview Assets.xcassets */; };
 		91B92A3123897D29000D2024 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B92A2F23897D29000D2024 /* LaunchScreen.storyboard */; };
-		91D4F4EE2389A232006C428E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D4F4ED2389A231006C428E /* CameraView.swift */; };
+		91D4F4EE2389A232006C428E /* FilteredPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D4F4ED2389A231006C428E /* FilteredPhotoView.swift */; };
 		91D4F4FD2389C463006C428E /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D4F4F82389C432006C428E /* GPUImage.framework */; };
 		91D4F4FF2389C473006C428E /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 91D4F4F82389C432006C428E /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91D4F5012389C722006C428E /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D4F5002389C722006C428E /* CameraPreviewView.swift */; };
+		91D4F5012389C722006C428E /* FilteredVideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D4F5002389C722006C428E /* FilteredVideoPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +76,9 @@
 		91B92A2D23897D29000D2024 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91B92A3023897D29000D2024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91B92A3223897D29000D2024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91D4F4ED2389A231006C428E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		91D4F4ED2389A231006C428E /* FilteredPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredPhotoView.swift; sourceTree = "<group>"; };
 		91D4F4F22389C432006C428E /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Desktop/GPUImage3-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
-		91D4F5002389C722006C428E /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		91D4F5002389C722006C428E /* FilteredVideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredVideoPreviewView.swift; sourceTree = "<group>"; };
 		C1E7A48D2DE5CA7DF68BB422 /* Pods-Test-Headshot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Headshot.release.xcconfig"; path = "Target Support Files/Pods-Test-Headshot/Pods-Test-Headshot.release.xcconfig"; sourceTree = "<group>"; };
 		F1F7729C5CD02C25106323B7 /* Pods_Test_Headshot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Headshot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,8 +134,8 @@
 		91B92A2323897D25000D2024 /* Test-Headshot */ = {
 			isa = PBXGroup;
 			children = (
-				91D4F5002389C722006C428E /* CameraPreviewView.swift */,
-				91D4F4ED2389A231006C428E /* CameraView.swift */,
+				91D4F5002389C722006C428E /* FilteredVideoPreviewView.swift */,
+				91D4F4ED2389A231006C428E /* FilteredPhotoView.swift */,
 				91B92A2423897D25000D2024 /* AppDelegate.swift */,
 				91B92A2623897D25000D2024 /* SceneDelegate.swift */,
 				91B92A2823897D25000D2024 /* ContentView.swift */,
@@ -290,9 +290,9 @@
 			files = (
 				91B92A2523897D25000D2024 /* AppDelegate.swift in Sources */,
 				91B92A2723897D25000D2024 /* SceneDelegate.swift in Sources */,
-				91D4F5012389C722006C428E /* CameraPreviewView.swift in Sources */,
+				91D4F5012389C722006C428E /* FilteredVideoPreviewView.swift in Sources */,
 				91B92A2923897D25000D2024 /* ContentView.swift in Sources */,
-				91D4F4EE2389A232006C428E /* CameraView.swift in Sources */,
+				91D4F4EE2389A232006C428E /* FilteredPhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
