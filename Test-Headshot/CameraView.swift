@@ -8,7 +8,6 @@
 import UIKit
 import SwiftUI
 import GPUImage
-import WebKit
 
 struct CameraView: UIViewRepresentable {
     

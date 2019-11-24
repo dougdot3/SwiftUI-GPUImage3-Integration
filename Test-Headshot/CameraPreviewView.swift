@@ -9,6 +9,8 @@
 import SwiftUI
 import AVFoundation
 import UIKit
+import GPUImage
+import BBMetalImage
 
 struct CameraPreviewView: UIViewControllerRepresentable  {
     
@@ -18,7 +20,7 @@ struct CameraPreviewView: UIViewControllerRepresentable  {
     }
     
     
-    // Tbh no idea what to do here
+    // View is not updating so we don't need this
     func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<CameraPreviewView>) {
         
     }
@@ -26,21 +28,44 @@ struct CameraPreviewView: UIViewControllerRepresentable  {
 
 class CameraViewController : UIViewController {
     
+    var camera: BBMetalCamera!
+    var videoWriter: BBMetalVideoWriter!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCamera()
     }
     
     func loadCamera() {
-        let avSession = AVCaptureSession()
         
-        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
-        guard let input = try? AVCaptureDeviceInput(device : captureDevice) else { return }
-        avSession.addInput(input)
-        avSession.startRunning()
+         camera = BBMetalCamera(sessionPreset: .hd1920x1080)!
+
+           // Set up 3 filters to process image
+            let contrastFilter = BBMetalContrastFilter(contrast: 3)
+            let sharpenFilter = BBMetalSharpenFilter(sharpeness: 1)
+            let erosionFilter = BBMetalBrightnessFilter(brightness: 0.4)
+
+
+           // Set up metal view to display image
+         
+            let metalView = BBMetalView(frame: CGRect(x: 0, y: 0, width: 400, height: 500))
+            view.addSubview(metalView)
+
+           
+           // Set up filter chain
+           camera.add(consumer: contrastFilter)
+                .add(consumer: sharpenFilter)
+                .add(consumer: erosionFilter)
+                .add(consumer: metalView)
+            
+
+          
+
+           // Start capturing
+           camera.start()
+
         
-        let cameraPreview = AVCaptureVideoPreviewLayer(session: avSession)
-        view.layer.addSublayer(cameraPreview)
-        cameraPreview.frame = view.frame
+        
     }
 }
