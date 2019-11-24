@@ -28,8 +28,9 @@ struct CameraPreviewView: UIViewControllerRepresentable  {
 
 class CameraViewController : UIViewController {
     
-    var camera: BBMetalCamera!
-    var videoWriter: BBMetalVideoWriter!
+   @IBOutlet weak var renderView: RenderView!
+    var camera:Camera!
+    var operation:GaussianBlur!
     
     
     override func viewDidLoad() {
@@ -38,34 +39,17 @@ class CameraViewController : UIViewController {
     }
     
     func loadCamera() {
-        
-         camera = BBMetalCamera(sessionPreset: .hd1920x1080)!
-
-           // Set up 3 filters to process image
-            let contrastFilter = BBMetalContrastFilter(contrast: 3)
-            let sharpenFilter = BBMetalSharpenFilter(sharpeness: 1)
-            let erosionFilter = BBMetalBrightnessFilter(brightness: 0.4)
-
-
-           // Set up metal view to display image
-         
-            let metalView = BBMetalView(frame: CGRect(x: 0, y: 0, width: 400, height: 500))
-            view.addSubview(metalView)
-
-           
-           // Set up filter chain
-           camera.add(consumer: contrastFilter)
-                .add(consumer: sharpenFilter)
-                .add(consumer: erosionFilter)
-                .add(consumer: metalView)
-            
-
-          
-
-           // Start capturing
-           camera.start()
-
-        
+        let finalView = RenderView(frame: CGRect(x: 0, y: 0, width: 400, height: 500))
+         do {
+            operation = GaussianBlur()
+            camera = try Camera(sessionPreset: .vga640x480)
+            camera.runBenchmark = true
+            camera --> operation --> finalView
+            camera.startCapture()
+        } catch {
+            fatalError("Could not initialize rendering pipeline: \(error)")
+        }
+        view.addSubview(finalView)
         
     }
 }

@@ -1,16 +1,3 @@
-PODS:
-  - BBMetalImage (1.0.10)
-
-DEPENDENCIES:
-  - BBMetalImage
-
-SPEC REPOS:
-  trunk:
-    - BBMetalImage
-
-SPEC CHECKSUMS:
-  BBMetalImage: 2defac2c5ff7766b07d3af5b18f437e3a5c09af4
-
-PODFILE CHECKSUM: 3f2e7a336cc7837a6c294769b3ace9a4b78ada4d
+PODFILE CHECKSUM: aa91109fc3e2cf52a856f39e42194016bedd7c77
 
 COCOAPODS: 1.8.4
